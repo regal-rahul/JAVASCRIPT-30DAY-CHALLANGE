@@ -63,8 +63,33 @@
       });
 
       // counting
+      console.count("RKC");
+      console.count("CODE");
+      console.count("RKC");
+      console.count("RKC");
+      console.count("RKC");
+      console.count("CODE");
+      console.count("RKC");
+      console.count("RKC");
+      console.count("CODE");
+      console.count("CODE");
+      console.count("CODE");
+      console.count("RKC");
+      console.count("RKC");
+      console.count("RKC");
+      console.count("CODE");
 
       // timing
+      console.time("Fetching Data");
+      fetch("https://api.github.com/users/regal-rahul")
+        .then((data) => data.json())
+        .then((data) => {
+          console.timeEnd("Fetching Data");
+          console.log(data);
+        });
+
+      // table
+      console.table(dogs);
     </script>
   </body>
 </html>
