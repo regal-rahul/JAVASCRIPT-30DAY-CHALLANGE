@@ -11,6 +11,22 @@
   <body>
     <h1>Hello</h1>
     <p>KONAMI CODE</p>
-    <script></script>
+    <script>
+      const pressed = [];
+      const secretCode = "regal";
+      window.addEventListener("keyup", (e) => {
+        console.log(e.key);
+        pressed.push(e.key);
+        pressed.splice(
+          -secretCode.length - 1,
+          pressed.length - secretCode.length
+        );
+        if (pressed.join("").includes(secretCode)) {
+          console.log("DING DING");
+          cornify_add();
+        }
+        console.log(pressed);
+      });
+    </script>
   </body>
 </html>
